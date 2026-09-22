@@ -1,33 +1,148 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" data-theme="light">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animated Border Card</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Horario de Clases: Desarrolo de Sistemas de Información</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="card">
-        <div class="lines"></div>
-        <div class="imgBx">
-            <img src="logo.png" alt="">
-        </div>
-        <div class="content">
-            <div class="details">
-                <h2>Mr. Skeleton<br><span>Senior UX/UI Designer
-                    Player</span></h2>
-            <div class="data">
-                <h3>392<br><span>Posts</span></h3>
-                <h3>6.5M<br><span>Followers</span></h3>
-                <h3>194<br><span>Following</span></h3>
-            </div>
-            <div class="actionBtn">
-                <button>Follow</button>
-                <button>Message</button>
-            </div>
-            </div>
-        </div>
+
+    <button class="theme-toggle-btn" id="themeToggle">Modo Oscuro</button>
+
+    <div class="schedule-container">
+        <table>
+            <thead>
+                <tr>
+                    <th class="time-col"></th>
+                    <th>LUNES</th>
+                    <th>MARTES</th>
+                    <th>MIERCOLES</th>
+                    <th>JUEVES</th>
+                    <th>VIERNES</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 17:30 - 18:15 -->
+                <tr>
+                    <td class="time-col">17:30</td>
+                    <td rowspan="2">
+                        <div class="card bg-textos">
+                            <span class="card-time">17:30 - 19:00</span>
+                            <span class="card-title">Interpretación y producción de textos</span>
+                            <span class="card-sub">W. Bustamante (Aula 102)</span>
+                        </div>
+                    </td>
+                    <td rowspan="2">
+                        <div class="card bg-equipos">
+                            <span class="card-time">17:30 - 19:00</span>
+                            <span class="card-title">Reparación de equipos de cómputo</span>
+                            <span class="card-sub">F. Guevara (LAB 105)</span>
+                        </div>
+                    </td>
+                    <td rowspan="3">
+                        <div class="card bg-redes">
+                            <span class="card-time">17:30 - 19:45</span>
+                            <span class="card-title">Instalación y configuración de redes de comunicación</span>
+                            <span class="card-sub">F. Guevara (LAB 105)</span>
+                        </div>
+                    </td>
+                    <td rowspan="3">
+                        <div class="card bg-software">
+                            <span class="card-time">17:30 - 19:45</span>
+                            <span class="card-title">Herramientas de desarrollo de software</span>
+                            <span class="card-sub">H. Lino (LAB 102)</span>
+                        </div>
+                    </td>
+                    <td rowspan="4">
+                        <div class="card bg-modelamiento">
+                            <span class="card-time">17:30 - 20:30</span>
+                            <span class="card-title">Modelamiento de Datos</span>
+                            <span class="card-sub">R. Miranda (LAB 102)</span>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- 18:15 - 19:00 -->
+                <tr>
+                    <td class="time-col">18:15</td>
+                </tr>
+
+                <!-- 19:00 - 19:45 -->
+                <tr>
+                    <td class="time-col">19:00</td>
+                    <td rowspan="2">
+                        <div class="card bg-software">
+                            <span class="card-time">19:00 - 20:30</span>
+                            <span class="card-title">Herramientas de desarrollo de software</span>
+                            <span class="card-sub">H. Lino (LAB 102)</span>
+                        </div>
+                    </td>
+                    <td rowspan="2">
+                        <div class="card bg-redes">
+                            <span class="card-time">19:00 - 20:30</span>
+                            <span class="card-title">Instalación y configuración de redes de comunicación</span>
+                            <span class="card-sub">F. Guevara (LAB 105)</span>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- 19:45 - 20:30 -->
+                <tr>
+                    <td class="time-col">19:45</td>
+                    <td rowspan="3">
+                        <div class="card bg-web">
+                            <span class="card-time">19:45 - 22:00</span>
+                            <span class="card-title">Desarrollo de Entorno Web</span>
+                            <span class="card-sub">H. Lino (LAB 102)</span>
+                        </div>
+                    </td>
+                    <td rowspan="3">
+                        <div class="card bg-equipos">
+                            <span class="card-time">19:45 - 22:00</span>
+                            <span class="card-title">Reparación de equipos de cómputo</span>
+                            <span class="card-sub">F. Guevara (LAB 105)</span>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- 20:30 - 21:15 -->
+                <tr>
+                    <td class="time-col">20:30</td>
+                    <td rowspan="2">
+                        <div class="card bg-ingles">
+                            <span class="card-time">20:30 - 22:00</span>
+                            <span class="card-title">Comprensión y redacción en inglés</span>
+                            <span class="card-sub">B. Cortez (LAB 102)</span>
+                        </div>
+                    </td>
+                    <td rowspan="2">
+                        <div class="card bg-software">
+                            <span class="card-time">20:30 - 22:00</span>
+                            <span class="card-title">Herramientas de desarrollo de software</span>
+                            <span class="card-sub">H. Lino (LAB 102)</span>
+                        </div>
+                    </td>
+
+                    <td rowspan="2">
+                        <div class="card bg-ofimatica">
+                            <span class="card-time">20:30 - 22:00</span>
+                            <span class="card-title">Ofimática</span>
+                            <span class="card-sub">R. Miranda (LAB 102)</span>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- 21:15 - 22:00 -->
+                <tr>
+                    <td class="time-col">21:15</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
+
+    <!-- Script sencillo para alternar los temas -->
+    <script src="script.js"></script>
+
 </body>
 </html>
