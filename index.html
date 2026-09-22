@@ -10,6 +10,15 @@
 
     <button class="theme-toggle-btn" id="themeToggle">Modo Oscuro</button>
 
+    <!-- PESTAÑAS PARA MÓVIL -->
+    <div class="day-tabs">
+        <button class="tab-btn active" onclick="switchDay('lunes')">LUNES</button>
+        <button class="tab-btn" onclick="switchDay('martes')">MARTES</button>
+        <button class="tab-btn" onclick="switchDay('miercoles')">MIÉRCOLES</button>
+        <button class="tab-btn" onclick="switchDay('jueves')">JUEVES</button>
+        <button class="tab-btn" onclick="switchDay('viernes')">VIERNES</button>
+    </div>
+    
     <div class="schedule-container">
         <table>
             <thead>
@@ -26,35 +35,35 @@
                 <!-- 17:30 - 18:15 -->
                 <tr>
                     <td class="time-col">17:30</td>
-                    <td rowspan="2">
+                    <td rowspan="2" data-day="lunes">
                         <div class="card bg-textos">
                             <span class="card-time">17:30 - 19:00</span>
                             <span class="card-title">Interpretación y producción de textos</span>
                             <span class="card-sub">W. Bustamante (Aula 102)</span>
                         </div>
                     </td>
-                    <td rowspan="2">
+                    <td rowspan="2" data-day="martes">
                         <div class="card bg-equipos">
                             <span class="card-time">17:30 - 19:00</span>
                             <span class="card-title">Reparación de equipos de cómputo</span>
                             <span class="card-sub">F. Guevara (LAB 105)</span>
                         </div>
                     </td>
-                    <td rowspan="3">
+                    <td rowspan="3" data-day="miercoles">
                         <div class="card bg-redes">
                             <span class="card-time">17:30 - 19:45</span>
                             <span class="card-title">Instalación y configuración de redes de comunicación</span>
                             <span class="card-sub">F. Guevara (LAB 105)</span>
                         </div>
                     </td>
-                    <td rowspan="3">
+                    <td rowspan="3"data-day="jueves">
                         <div class="card bg-software">
                             <span class="card-time">17:30 - 19:45</span>
                             <span class="card-title">Herramientas de desarrollo de software</span>
                             <span class="card-sub">H. Lino (LAB 102)</span>
                         </div>
                     </td>
-                    <td rowspan="4">
+                    <td rowspan="4" data-day="viernes">
                         <div class="card bg-modelamiento">
                             <span class="card-time">17:30 - 20:30</span>
                             <span class="card-title">Modelamiento de Datos</span>
@@ -71,14 +80,14 @@
                 <!-- 19:00 - 19:45 -->
                 <tr>
                     <td class="time-col">19:00</td>
-                    <td rowspan="2">
+                    <td rowspan="2" data-day="lunes">
                         <div class="card bg-software">
                             <span class="card-time">19:00 - 20:30</span>
                             <span class="card-title">Herramientas de desarrollo de software</span>
                             <span class="card-sub">H. Lino (LAB 102)</span>
                         </div>
                     </td>
-                    <td rowspan="2">
+                    <td rowspan="2" data-day="martes">
                         <div class="card bg-redes">
                             <span class="card-time">19:00 - 20:30</span>
                             <span class="card-title">Instalación y configuración de redes de comunicación</span>
@@ -90,14 +99,14 @@
                 <!-- 19:45 - 20:30 -->
                 <tr>
                     <td class="time-col">19:45</td>
-                    <td rowspan="3">
+                    <td rowspan="3" data-day="miercoles">
                         <div class="card bg-web">
                             <span class="card-time">19:45 - 22:00</span>
                             <span class="card-title">Desarrollo de Entorno Web</span>
                             <span class="card-sub">H. Lino (LAB 102)</span>
                         </div>
                     </td>
-                    <td rowspan="3">
+                    <td rowspan="3" data-day="jueves">
                         <div class="card bg-equipos">
                             <span class="card-time">19:45 - 22:00</span>
                             <span class="card-title">Reparación de equipos de cómputo</span>
@@ -109,14 +118,14 @@
                 <!-- 20:30 - 21:15 -->
                 <tr>
                     <td class="time-col">20:30</td>
-                    <td rowspan="2">
+                    <td rowspan="2" data-day="lunes">
                         <div class="card bg-ingles">
                             <span class="card-time">20:30 - 22:00</span>
                             <span class="card-title">Comprensión y redacción en inglés</span>
                             <span class="card-sub">B. Cortez (LAB 102)</span>
                         </div>
                     </td>
-                    <td rowspan="2">
+                    <td rowspan="2" data-day="martes">
                         <div class="card bg-software">
                             <span class="card-time">20:30 - 22:00</span>
                             <span class="card-title">Herramientas de desarrollo de software</span>
@@ -124,7 +133,7 @@
                         </div>
                     </td>
 
-                    <td rowspan="2">
+                    <td rowspan="2" data-day="viernes">
                         <div class="card bg-ofimatica">
                             <span class="card-time">20:30 - 22:00</span>
                             <span class="card-title">Ofimática</span>

@@ -162,3 +162,95 @@ th {
 .bg-ingles       { background-color: var(--color-ingles-bg);       color: var(--color-ingles-text); }
 .bg-web          { background-color: var(--color-web-bg);          color: var(--color-web-text); }
 .bg-ofimatica    { background-color: var(--color-ofimatica-bg);    color: var(--color-ofimatica-text); }
+
+/* ==========================================
+   ESTILOS RESPONSIVE (MÓVILES Y TABLETS)
+   ========================================== */
+
+/* Pestañas de días (Ocultas en PC) */
+.day-tabs {
+    display: none;
+    gap: 8px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 1100px;
+    overflow-x: auto;
+    padding-bottom: 5px;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 10px 14px;
+    border: 1px solid var(--grid-border);
+    border-radius: 8px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+}
+
+.tab-btn.active {
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+}
+
+/* Pantallas pequeñas (menores a 768px) */
+@media screen and (max-width: 768px) {
+    /* Mostrar pestañas de días */
+    .day-tabs {
+        display: flex;
+    }
+
+    /* Ocultar el encabezado de la tabla */
+    thead {
+        display: none;
+    }
+
+    /* Transformar la tabla en un flujo vertical */
+    table, tbody, tr, td {
+        display: block;
+        width: 100%;
+    }
+
+    /* Ocultar las columnas de horas laterales */
+    .time-col {
+        display: none;
+    }
+
+    /* Ocultar celdas por defecto; se mostrarán según el día activo */
+    td[data-day] {
+        display: none;
+        height: auto;
+        border: none;
+        padding: 4px 0;
+    }
+
+    /* Mostrar solo las celdas del día seleccionado */
+    body[data-active-day="lunes"] td[data-day="lunes"],
+    body[data-active-day="martes"] td[data-day="martes"],
+    body[data-active-day="miercoles"] td[data-day="miercoles"],
+    body[data-active-day="jueves"] td[data-day="jueves"],
+    body[data-active-day="viernes"] td[data-day="viernes"] {
+        display: block;
+    }
+
+    /* Ajuste de tarjetas en celular */
+    .card {
+        height: auto;
+        min-height: 85px;
+        margin-bottom: 12px;
+        padding: 16px;
+    }
+
+    .card-time {
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .card-title {
+        font-size: 15px;
+    }
+}

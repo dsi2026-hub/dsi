@@ -1,3 +1,4 @@
+        // Lógica de tema claro/oscuro
         const btn = document.getElementById('themeToggle');
         btn.addEventListener('click', () => {
             const currentTheme = document.documentElement.getAttribute('data-theme');
@@ -9,3 +10,12 @@
                 btn.textContent = 'Modo Claro';
             }
         });
+// Lógica de pestañas para móvil
+        document.body.setAttribute('data-active-day', 'lunes');
+
+        function switchDay(day) {
+            document.body.setAttribute('data-active-day', day);
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
